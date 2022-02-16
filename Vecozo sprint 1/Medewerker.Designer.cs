@@ -43,9 +43,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.TxtRating = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtRol = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtPers = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Ster2 = new System.Windows.Forms.PictureBox();
             this.Ster3 = new System.Windows.Forms.PictureBox();
@@ -53,6 +53,7 @@
             this.Ster5 = new System.Windows.Forms.PictureBox();
             this.Ster1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnOpslaan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -207,35 +208,35 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 152);
+            this.label6.Location = new System.Drawing.Point(17, 151);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 20);
             this.label6.TabIndex = 46;
             this.label6.Text = "Rol:";
             // 
-            // textBox3
+            // TxtRol
             // 
-            this.textBox3.Location = new System.Drawing.Point(19, 175);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(189, 20);
-            this.textBox3.TabIndex = 47;
+            this.TxtRol.Location = new System.Drawing.Point(20, 174);
+            this.TxtRol.Name = "TxtRol";
+            this.TxtRol.Size = new System.Drawing.Size(189, 20);
+            this.TxtRol.TabIndex = 47;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 218);
+            this.label7.Location = new System.Drawing.Point(15, 208);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(134, 20);
             this.label7.TabIndex = 48;
             this.label7.Text = "Persoonlijkheden:";
             // 
-            // textBox4
+            // TxtPers
             // 
-            this.textBox4.Location = new System.Drawing.Point(19, 252);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(189, 20);
-            this.textBox4.TabIndex = 49;
+            this.TxtPers.Location = new System.Drawing.Point(19, 231);
+            this.TxtPers.Name = "TxtPers";
+            this.TxtPers.Size = new System.Drawing.Size(189, 20);
+            this.TxtPers.TabIndex = 49;
             // 
             // button1
             // 
@@ -243,7 +244,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 42);
             this.button1.TabIndex = 50;
-            this.button1.Text = "Opslaan en terug naar hoofdmenu";
+            this.button1.Text = " terug naar hoofdmenu";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -257,6 +258,7 @@
             this.Ster2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Ster2.TabIndex = 52;
             this.Ster2.TabStop = false;
+            this.Ster2.Tag = "Ster";
             this.Ster2.MouseEnter += new System.EventHandler(this.Ster_Enter);
             this.Ster2.MouseLeave += new System.EventHandler(this.Ster_Leave);
             // 
@@ -270,6 +272,7 @@
             this.Ster3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Ster3.TabIndex = 53;
             this.Ster3.TabStop = false;
+            this.Ster3.Tag = "Ster";
             this.Ster3.MouseEnter += new System.EventHandler(this.Ster_Enter);
             this.Ster3.MouseLeave += new System.EventHandler(this.Ster_Leave);
             // 
@@ -283,6 +286,8 @@
             this.Ster4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Ster4.TabIndex = 54;
             this.Ster4.TabStop = false;
+            this.Ster4.Tag = "Ster";
+            this.Ster4.Click += new System.EventHandler(this.Ster_Click);
             this.Ster4.MouseEnter += new System.EventHandler(this.Ster_Enter);
             this.Ster4.MouseLeave += new System.EventHandler(this.Ster_Leave);
             // 
@@ -296,6 +301,7 @@
             this.Ster5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Ster5.TabIndex = 55;
             this.Ster5.TabStop = false;
+            this.Ster5.Tag = "Ster";
             this.Ster5.MouseEnter += new System.EventHandler(this.Ster_Enter);
             this.Ster5.MouseLeave += new System.EventHandler(this.Ster_Leave);
             // 
@@ -309,11 +315,13 @@
             this.Ster1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Ster1.TabIndex = 56;
             this.Ster1.TabStop = false;
+            this.Ster1.Tag = "Ster";
             this.Ster1.MouseEnter += new System.EventHandler(this.Ster_Enter);
             this.Ster1.MouseLeave += new System.EventHandler(this.Ster_Leave);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.BtnOpslaan);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.Ster1);
             this.groupBox1.Controls.Add(this.label5);
@@ -322,15 +330,25 @@
             this.groupBox1.Controls.Add(this.Ster4);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.Ster3);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.TxtRol);
             this.groupBox1.Controls.Add(this.Ster2);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.TxtPers);
             this.groupBox1.Location = new System.Drawing.Point(151, 130);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(263, 308);
             this.groupBox1.TabIndex = 57;
             this.groupBox1.TabStop = false;
+            // 
+            // BtnOpslaan
+            // 
+            this.BtnOpslaan.Location = new System.Drawing.Point(183, 279);
+            this.BtnOpslaan.Name = "BtnOpslaan";
+            this.BtnOpslaan.Size = new System.Drawing.Size(60, 23);
+            this.BtnOpslaan.TabIndex = 57;
+            this.BtnOpslaan.Text = "Opslaan";
+            this.BtnOpslaan.UseVisualStyleBackColor = true;
+            this.BtnOpslaan.Click += new System.EventHandler(this.BtnOpslaan_Click);
             // 
             // Medewerker
             // 
@@ -384,9 +402,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtRating;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtRol;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtPers;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox Ster2;
         private System.Windows.Forms.PictureBox Ster3;
@@ -394,5 +412,6 @@
         private System.Windows.Forms.PictureBox Ster5;
         private System.Windows.Forms.PictureBox Ster1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button BtnOpslaan;
     }
 }
