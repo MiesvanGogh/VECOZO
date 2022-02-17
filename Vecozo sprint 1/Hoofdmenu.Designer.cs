@@ -1,6 +1,6 @@
 ﻿namespace Vecozo_sprint_1
 {
-    partial class Form1
+    partial class Hoofdmenu
     {
         /// <summary>
         /// Required designer variable.
@@ -62,7 +62,7 @@
             this.BtnMan.UseVisualStyleBackColor = true;
             this.BtnMan.Click += new System.EventHandler(this.BtnMan_Click);
             // 
-            // Form1
+            // Hoofdmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -70,8 +70,9 @@
             this.Controls.Add(this.BtnMan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnMed);
-            this.Name = "Form1";
+            this.Name = "Hoofdmenu";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Hoofdmenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

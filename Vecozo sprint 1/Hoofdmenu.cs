@@ -10,27 +10,35 @@ using System.Windows.Forms;
 
 namespace Vecozo_sprint_1
 {
-    public partial class Form1 : Form
+    
+    public partial class Hoofdmenu : Form
     {
-        public Form1()
+        Rol rol = null;
+
+        public Hoofdmenu()
         {
             InitializeComponent();
-            
-            
         }
 
         private void BtnMan_Click(object sender, EventArgs e)
         {
             Manager Man = new Manager();
             this.Hide();
-            Man.Show();
+            Man.ShowDialog();
+            this.Show();
         }
 
         private void BtnMed_Click(object sender, EventArgs e)
         {
-            Medewerker Med = new Medewerker();
+            Medewerker Med = new Medewerker(rol);
             this.Hide();
-            Med.Show();
+            Med.ShowDialog();
+            this.Show();
+        }
+
+        private void Hoofdmenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

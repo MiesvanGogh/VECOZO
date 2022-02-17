@@ -16,12 +16,10 @@ namespace Vecozo_sprint_1
         Image SterVol = Vecozo_sprint_1.Properties.Resources.ster_vol;
         Image SterLeeg = Vecozo_sprint_1.Properties.Resources.ster;
         List<PictureBox> pictureBoxes = new List<PictureBox>();
-        bool DontRunHandler; // dit zorgt ervoor dat hadnlers uitgaan wanneer we dat willen.
-
-        public Medewerker()
+        Rol rol;
+        public Medewerker(Rol rol)
         {
             InitializeComponent();
-            
             foreach(PictureBox pictureBox in pictureBoxes)
             {
                 if(pictureBox.Tag.ToString() == "Ster")
@@ -29,6 +27,8 @@ namespace Vecozo_sprint_1
                     pictureBoxes.Add(pictureBox);
                 }
             }
+
+            this.Name = rol.ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -36,55 +36,44 @@ namespace Vecozo_sprint_1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form1 F = new Form1();
-            this.Hide();
-            F.Show();
-        }
+        
         
         private void Ster_Enter(object sender, EventArgs e)
         {
-            PictureBox Ster = (PictureBox)sender;
-            Ster.Image = SterVol;
-            Ster1.Image = SterVol;
+                PictureBox Ster = (PictureBox)sender;
+                Ster.Image = SterVol;
+                Ster1.Image = SterVol;
 
-            if (Ster == Ster5)
-            {
-                Ster4.Image = SterVol;
-                Ster3.Image = SterVol;
-                Ster2.Image = SterVol;
+                if (Ster == Ster5)
+                {
+                    Ster4.Image = SterVol;
+                    Ster3.Image = SterVol;
+                    Ster2.Image = SterVol;
 
-            }
-            if (Ster == Ster4)
-            {
-                Ster3.Image = SterVol;
-                Ster2.Image = SterVol;
-            }
-            if (Ster == Ster3)
-            {
-                Ster2.Image = SterVol;
-            }
+                }
+                if (Ster == Ster4)
+                {
+                    Ster3.Image = SterVol;
+                    Ster2.Image = SterVol;
+                }
+                if (Ster == Ster3)
+                {
+                    Ster2.Image = SterVol;
+                }
         }
 
         private void Ster_Leave(object sender, EventArgs e)
         {
-            if (!DontRunHandler) 
-            {
                 Ster1.Image = SterLeeg;
                 Ster2.Image = SterLeeg;
                 Ster3.Image = SterLeeg;
                 Ster4.Image = SterLeeg;
                 Ster5.Image = SterLeeg;
-            }
-            return;
-            //zorg ervoor dat leave uitgaat als we klikken op een ster(dontrunhandler true)
         }
 
         private void Ster_Click(object sender, EventArgs e)
         {
-            Ster_Enter(sender, e);
-            DontRunHandler = true;
+            //Ster_Enter(sender, e);
             //zorgen dat de handlers uitgaan die we willen.
         }
 
@@ -92,20 +81,39 @@ namespace Vecozo_sprint_1
         {
             foreach (PictureBox pictureBox in pictureBoxes)
             {
-                if (TxtRating.Text != "" && pictureBox.Image != SterLeeg)
+                if (TxtRating.Text != "" && RatingNum.Value > 0)
                 {
-                    pictureBox.Image = SterLeeg;
+                    rol = new Rol(BoxRol.Text);
                     TxtRating.Text = "";
                     TxtPers.Text = "";
-                    TxtRol.Text = "";
+                    BoxRol.Text = "";
                 }
                 else
                 {
                     MessageBox.Show("Vul je vaardigheid in!");
                 }
-
             }
-            DontRunHandler = false;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /*Hoofdmenu F = new Hoofdmenu(rol);
+            this.Hide();
+            F.Show();*/
+            this.Close();
+            
+        }
+        private void BoxRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void Medewerker_Load(object sender, EventArgs e)
+        {
+            List<Rol> rollen = new List<Rol>();
+            rollen.Add(new Rol(""));
+            rollen.Add(new Rol("Projectleider"));
+            rollen.Add(new Rol("Projectlid"));
+            rollen.Add(new Rol("Onderzoeker"));
+            BoxRol.DataSource = rollen;
         }
     }
 }

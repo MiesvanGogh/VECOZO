@@ -19,28 +19,14 @@ namespace Vecozo_sprint_1
            
         }
 
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
 
-        }
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void pictureBox13_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 F = new Form1();
+            /*Hoofdmenu F = new Hoofdmenu();
             this.Hide();
-            F.Show();
+            F.Show();*/
+            this.Close();
         }
     }
 }

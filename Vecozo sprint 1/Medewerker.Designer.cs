@@ -43,7 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.TxtRating = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.TxtRol = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.TxtPers = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -53,6 +52,8 @@
             this.Ster5 = new System.Windows.Forms.PictureBox();
             this.Ster1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.RatingNum = new System.Windows.Forms.NumericUpDown();
+            this.BoxRol = new System.Windows.Forms.ComboBox();
             this.BtnOpslaan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -65,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Ster5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ster1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RatingNum)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -214,13 +216,6 @@
             this.label6.TabIndex = 46;
             this.label6.Text = "Rol:";
             // 
-            // TxtRol
-            // 
-            this.TxtRol.Location = new System.Drawing.Point(20, 174);
-            this.TxtRol.Name = "TxtRol";
-            this.TxtRol.Size = new System.Drawing.Size(189, 20);
-            this.TxtRol.TabIndex = 47;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -321,6 +316,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.RatingNum);
+            this.groupBox1.Controls.Add(this.BoxRol);
             this.groupBox1.Controls.Add(this.BtnOpslaan);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.Ster1);
@@ -330,7 +327,6 @@
             this.groupBox1.Controls.Add(this.Ster4);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.Ster3);
-            this.groupBox1.Controls.Add(this.TxtRol);
             this.groupBox1.Controls.Add(this.Ster2);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.TxtPers);
@@ -339,6 +335,32 @@
             this.groupBox1.Size = new System.Drawing.Size(263, 308);
             this.groupBox1.TabIndex = 57;
             this.groupBox1.TabStop = false;
+            // 
+            // RatingNum
+            // 
+            this.RatingNum.Location = new System.Drawing.Point(19, 129);
+            this.RatingNum.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.RatingNum.Name = "RatingNum";
+            this.RatingNum.ReadOnly = true;
+            this.RatingNum.Size = new System.Drawing.Size(35, 20);
+            this.RatingNum.TabIndex = 59;
+            // 
+            // BoxRol
+            // 
+            this.BoxRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.BoxRol.FormattingEnabled = true;
+            this.BoxRol.Items.AddRange(new object[] {
+            "Projectleider\t",
+            "Projectlid"});
+            this.BoxRol.Location = new System.Drawing.Point(19, 174);
+            this.BoxRol.Name = "BoxRol";
+            this.BoxRol.Size = new System.Drawing.Size(189, 21);
+            this.BoxRol.TabIndex = 58;
+            this.BoxRol.SelectedIndexChanged += new System.EventHandler(this.BoxRol_SelectedIndexChanged);
             // 
             // BtnOpslaan
             // 
@@ -369,6 +391,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Medewerker";
             this.Text = "Medewerker";
+            this.Load += new System.EventHandler(this.Medewerker_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -381,6 +404,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Ster1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RatingNum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,7 +426,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtRating;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox TxtRol;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox TxtPers;
         private System.Windows.Forms.Button button1;
@@ -413,5 +436,7 @@
         private System.Windows.Forms.PictureBox Ster1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button BtnOpslaan;
+        private System.Windows.Forms.ComboBox BoxRol;
+        private System.Windows.Forms.NumericUpDown RatingNum;
     }
 }
