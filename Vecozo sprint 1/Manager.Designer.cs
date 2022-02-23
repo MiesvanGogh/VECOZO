@@ -49,6 +49,12 @@
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.LbRol = new System.Windows.Forms.Label();
+            this.LbNaam = new System.Windows.Forms.Label();
+            this.GBMedewerker = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -62,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            this.GBMedewerker.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -282,11 +289,71 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // LbRol
+            // 
+            this.LbRol.AutoSize = true;
+            this.LbRol.Location = new System.Drawing.Point(78, 23);
+            this.LbRol.Name = "LbRol";
+            this.LbRol.Size = new System.Drawing.Size(23, 13);
+            this.LbRol.TabIndex = 53;
+            this.LbRol.Text = "Rol";
+            // 
+            // LbNaam
+            // 
+            this.LbNaam.AutoSize = true;
+            this.LbNaam.Location = new System.Drawing.Point(210, 165);
+            this.LbNaam.Name = "LbNaam";
+            this.LbNaam.Size = new System.Drawing.Size(35, 13);
+            this.LbNaam.TabIndex = 54;
+            this.LbNaam.Text = "Naam";
+            // 
+            // GBMedewerker
+            // 
+            this.GBMedewerker.Controls.Add(this.label7);
+            this.GBMedewerker.Controls.Add(this.label6);
+            this.GBMedewerker.Controls.Add(this.label5);
+            this.GBMedewerker.Controls.Add(this.LbRol);
+            this.GBMedewerker.Location = new System.Drawing.Point(531, 152);
+            this.GBMedewerker.Name = "GBMedewerker";
+            this.GBMedewerker.Size = new System.Drawing.Size(214, 229);
+            this.GBMedewerker.TabIndex = 55;
+            this.GBMedewerker.TabStop = false;
+            this.GBMedewerker.Text = "Info Medewerker";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(46, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(26, 13);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "Rol:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(31, 45);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 13);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "Rating:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 66);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 13);
+            this.label7.TabIndex = 56;
+            this.label7.Text = "Vaardigheid:";
+            // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.GBMedewerker);
+            this.Controls.Add(this.LbNaam);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox13);
@@ -309,6 +376,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Manager";
             this.Text = "Manager";
+            this.Load += new System.EventHandler(this.Manager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -322,6 +390,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            this.GBMedewerker.ResumeLayout(false);
+            this.GBMedewerker.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,5 +419,11 @@
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label LbRol;
+        private System.Windows.Forms.Label LbNaam;
+        private System.Windows.Forms.GroupBox GBMedewerker;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }

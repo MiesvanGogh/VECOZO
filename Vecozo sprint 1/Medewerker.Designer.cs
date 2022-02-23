@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtNaam = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtRating = new System.Windows.Forms.TextBox();
@@ -173,12 +173,12 @@
             this.label4.TabIndex = 40;
             this.label4.Text = "Notifications";
             // 
-            // textBox2
+            // TxtNaam
             // 
-            this.textBox2.Location = new System.Drawing.Point(26, 178);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 41;
+            this.TxtNaam.Location = new System.Drawing.Point(26, 178);
+            this.TxtNaam.Name = "TxtNaam";
+            this.TxtNaam.Size = new System.Drawing.Size(100, 20);
+            this.TxtNaam.TabIndex = 41;
             // 
             // label2
             // 
@@ -235,11 +235,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(26, 354);
+            this.button1.Location = new System.Drawing.Point(26, 361);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 42);
+            this.button1.Size = new System.Drawing.Size(100, 35);
             this.button1.TabIndex = 50;
-            this.button1.Text = " terug naar hoofdmenu";
+            this.button1.Text = "Ga naar Manager";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -379,7 +379,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxtNaam);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.label3);
@@ -421,7 +421,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtNaam;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtRating;

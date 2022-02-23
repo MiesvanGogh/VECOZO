@@ -16,7 +16,7 @@ namespace Vecozo_sprint_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Hoofdmenu());
+            Application.Run(new Medewerker());
         }
     }
 }

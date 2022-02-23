@@ -17,9 +17,10 @@ namespace Vecozo_sprint_1
         Image SterLeeg = Vecozo_sprint_1.Properties.Resources.ster;
         List<PictureBox> pictureBoxes = new List<PictureBox>();
         Rol rol;
-        public Medewerker(Rol rol)
+        Vaardigheid vaardigheid;
+        Naam naam;
+        public Medewerker(Rol rol, Vaardigheid vaardigheid, Naam naam)
         {
-            InitializeComponent();
             foreach(PictureBox pictureBox in pictureBoxes)
             {
                 if(pictureBox.Tag.ToString() == "Ster")
@@ -27,17 +28,16 @@ namespace Vecozo_sprint_1
                     pictureBoxes.Add(pictureBox);
                 }
             }
+        }
 
-            this.Name = rol.ToString();
+        public Medewerker()
+        {
+            InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        
-        
+        }       
         private void Ster_Enter(object sender, EventArgs e)
         {
                 PictureBox Ster = (PictureBox)sender;
@@ -61,7 +61,6 @@ namespace Vecozo_sprint_1
                     Ster2.Image = SterVol;
                 }
         }
-
         private void Ster_Leave(object sender, EventArgs e)
         {
                 Ster1.Image = SterLeeg;
@@ -70,7 +69,6 @@ namespace Vecozo_sprint_1
                 Ster4.Image = SterLeeg;
                 Ster5.Image = SterLeeg;
         }
-
         private void Ster_Click(object sender, EventArgs e)
         {
             //Ster_Enter(sender, e);
@@ -79,33 +77,32 @@ namespace Vecozo_sprint_1
 
         private void BtnOpslaan_Click(object sender, EventArgs e)
         {
-            foreach (PictureBox pictureBox in pictureBoxes)
-            {
                 if (TxtRating.Text != "" && RatingNum.Value > 0)
                 {
                     rol = new Rol(BoxRol.Text);
+                    vaardigheid = new Vaardigheid(TxtRating.Text);
+                    naam = new Naam(TxtNaam.Text);
                     TxtRating.Text = "";
                     TxtPers.Text = "";
                     BoxRol.Text = "";
+                    TxtNaam.Text = "";
+                    MessageBox.Show("Mies");
                 }
                 else
                 {
                     MessageBox.Show("Vul je vaardigheid in!");
                 }
-            }
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            /*Hoofdmenu F = new Hoofdmenu(rol);
+            Manager Man = new Manager(rol, vaardigheid, naam);
             this.Hide();
-            F.Show();*/
-            this.Close();
-            
+            Man.ShowDialog();
+            this.Show();
         }
         private void BoxRol_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
-
         private void Medewerker_Load(object sender, EventArgs e)
         {
             List<Rol> rollen = new List<Rol>();

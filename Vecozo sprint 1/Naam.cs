@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Vecozo_sprint_1
 {
-    public class Vaardigheid
+    public class Naam
     {
-        private string VaardigheidNaam;
+        private string NaamNaam;
 
-        public Vaardigheid(string naam)
+        public Naam(string naam)
         {
-            this.VaardigheidNaam = naam;
+            this.NaamNaam = naam;
         }
         public override string ToString()
         {
-            return VaardigheidNaam;
+            return NaamNaam;
         }
     }
 }
