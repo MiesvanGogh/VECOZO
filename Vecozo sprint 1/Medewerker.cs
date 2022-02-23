@@ -19,7 +19,9 @@ namespace Vecozo_sprint_1
         Rol rol;
         Vaardigheid vaardigheid;
         Naam naam;
-        public Medewerker(Rol rol, Vaardigheid vaardigheid, Naam naam)
+        Persoonlijkheden persoonlijkheden;
+        Rating rating;
+        public Medewerker(Rol rol, Vaardigheid vaardigheid, Naam naam, Persoonlijkheden persoonlijkheden, Rating rating)
         {
             foreach(PictureBox pictureBox in pictureBoxes)
             {
@@ -82,6 +84,8 @@ namespace Vecozo_sprint_1
                     rol = new Rol(BoxRol.Text);
                     vaardigheid = new Vaardigheid(TxtRating.Text);
                     naam = new Naam(TxtNaam.Text);
+                    persoonlijkheden = new Persoonlijkheden(TxtPers.Text);
+                    rating = new Rating(RatingNum.Value.ToString());
                     TxtRating.Text = "";
                     TxtPers.Text = "";
                     BoxRol.Text = "";
@@ -95,7 +99,7 @@ namespace Vecozo_sprint_1
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Manager Man = new Manager(rol, vaardigheid, naam);
+            Manager Man = new Manager(rol, vaardigheid, naam, persoonlijkheden, rating);
             this.Hide();
             Man.ShowDialog();
             this.Show();

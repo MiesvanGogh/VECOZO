@@ -55,6 +55,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.LbVaardigheid = new System.Windows.Forms.Label();
+            this.LbPers = new System.Windows.Forms.Label();
+            this.LbRating = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -83,6 +87,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(166, 152);
             this.pictureBox2.Name = "pictureBox2";
@@ -90,6 +95,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Mederwerker
             // 
@@ -148,7 +154,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(389, 152);
+            this.pictureBox6.Location = new System.Drawing.Point(319, 152);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(38, 36);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -159,7 +165,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(389, 218);
+            this.pictureBox7.Location = new System.Drawing.Point(319, 218);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(38, 36);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -170,7 +176,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(389, 281);
+            this.pictureBox8.Location = new System.Drawing.Point(319, 281);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(38, 36);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -181,7 +187,7 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(389, 345);
+            this.pictureBox9.Location = new System.Drawing.Point(319, 345);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(38, 36);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -292,7 +298,7 @@
             // LbRol
             // 
             this.LbRol.AutoSize = true;
-            this.LbRol.Location = new System.Drawing.Point(78, 23);
+            this.LbRol.Location = new System.Drawing.Point(100, 82);
             this.LbRol.Name = "LbRol";
             this.LbRol.Size = new System.Drawing.Size(23, 13);
             this.LbRol.TabIndex = 53;
@@ -309,21 +315,26 @@
             // 
             // GBMedewerker
             // 
+            this.GBMedewerker.Controls.Add(this.LbRating);
+            this.GBMedewerker.Controls.Add(this.LbPers);
+            this.GBMedewerker.Controls.Add(this.LbVaardigheid);
+            this.GBMedewerker.Controls.Add(this.label8);
             this.GBMedewerker.Controls.Add(this.label7);
             this.GBMedewerker.Controls.Add(this.label6);
             this.GBMedewerker.Controls.Add(this.label5);
             this.GBMedewerker.Controls.Add(this.LbRol);
             this.GBMedewerker.Location = new System.Drawing.Point(531, 152);
             this.GBMedewerker.Name = "GBMedewerker";
-            this.GBMedewerker.Size = new System.Drawing.Size(214, 229);
+            this.GBMedewerker.Size = new System.Drawing.Size(214, 180);
             this.GBMedewerker.TabIndex = 55;
             this.GBMedewerker.TabStop = false;
             this.GBMedewerker.Text = "Info Medewerker";
+            this.GBMedewerker.Visible = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(46, 23);
+            this.label5.Location = new System.Drawing.Point(68, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 54;
@@ -332,7 +343,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 45);
+            this.label6.Location = new System.Drawing.Point(56, 50);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 13);
             this.label6.TabIndex = 55;
@@ -341,11 +352,47 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 66);
+            this.label7.Location = new System.Drawing.Point(31, 23);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 13);
             this.label7.TabIndex = 56;
             this.label7.Text = "Vaardigheid:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(4, 110);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(91, 13);
+            this.label8.TabIndex = 57;
+            this.label8.Text = "Persoonlijkheden:";
+            // 
+            // LbVaardigheid
+            // 
+            this.LbVaardigheid.AutoSize = true;
+            this.LbVaardigheid.Location = new System.Drawing.Point(100, 23);
+            this.LbVaardigheid.Name = "LbVaardigheid";
+            this.LbVaardigheid.Size = new System.Drawing.Size(63, 13);
+            this.LbVaardigheid.TabIndex = 58;
+            this.LbVaardigheid.Text = "Vaardigheid";
+            // 
+            // LbPers
+            // 
+            this.LbPers.AutoSize = true;
+            this.LbPers.Location = new System.Drawing.Point(100, 110);
+            this.LbPers.Name = "LbPers";
+            this.LbPers.Size = new System.Drawing.Size(88, 13);
+            this.LbPers.TabIndex = 59;
+            this.LbPers.Text = "Persoonlijkheden";
+            // 
+            // LbRating
+            // 
+            this.LbRating.AutoSize = true;
+            this.LbRating.Location = new System.Drawing.Point(103, 50);
+            this.LbRating.Name = "LbRating";
+            this.LbRating.Size = new System.Drawing.Size(38, 13);
+            this.LbRating.TabIndex = 60;
+            this.LbRating.Text = "Rating";
             // 
             // Manager
             // 
@@ -425,5 +472,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LbVaardigheid;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label LbPers;
+        private System.Windows.Forms.Label LbRating;
     }
 }

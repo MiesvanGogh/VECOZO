@@ -59,8 +59,10 @@
       <DependentUpon>Medewerker.cs</DependentUpon>
     </Compile>
     <Compile Include="Naam.cs" />
+    <Compile Include="Persoonlijkheden.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rating.cs" />
     <Compile Include="Rol.cs" />
     <Compile Include="Vaardigheid.cs" />
     <EmbeddedResource Include="Manager.resx">
